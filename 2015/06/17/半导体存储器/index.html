@@ -1,0 +1,737 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+
+
+  <meta name="keywords" content="存储," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="毕设写完了，翻译和论文中涉及了一些半导体存储器的资料，在此顺便整理一下。半导体存储器也是IC发展的一个重要分支，从计算机诞生最初的内存RAM和ROM发展而来，RAM的速度越来越快，而ROM也发展到可以作为大容量数据的存储介质。
+
+
+#RAM#RAM（Random Access Memory，随机存取存储器），传统的RAM可分为SRAM（动态随机存取存储器）和 DRAM（静态随机存取存储器）。
+
+S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="半导体存储器">
+<meta property="og:url" content="http://yoursite.com/2015/06/17/半导体存储器/index.html">
+<meta property="og:site_name" content="yzxia's fishpond">
+<meta property="og:description" content="毕设写完了，翻译和论文中涉及了一些半导体存储器的资料，在此顺便整理一下。半导体存储器也是IC发展的一个重要分支，从计算机诞生最初的内存RAM和ROM发展而来，RAM的速度越来越快，而ROM也发展到可以作为大容量数据的存储介质。
+
+
+#RAM#RAM（Random Access Memory，随机存取存储器），传统的RAM可分为SRAM（动态随机存取存储器）和 DRAM（静态随机存取存储器）。
+
+S">
+<meta property="og:image" content="http://7teagv.com1.z0.glb.clouddn.com/半导体存储器家族.png">
+<meta property="og:image" content="http://7teagv.com1.z0.glb.clouddn.com/EEPROM.png">
+<meta property="og:updated_time" content="2015-07-02T06:06:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="半导体存储器">
+<meta name="twitter:description" content="毕设写完了，翻译和论文中涉及了一些半导体存储器的资料，在此顺便整理一下。半导体存储器也是IC发展的一个重要分支，从计算机诞生最初的内存RAM和ROM发展而来，RAM的速度越来越快，而ROM也发展到可以作为大容量数据的存储介质。
+
+
+#RAM#RAM（Random Access Memory，随机存取存储器），传统的RAM可分为SRAM（动态随机存取存储器）和 DRAM（静态随机存取存储器）。
+
+S">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> 半导体存储器 | yzxia's fishpond </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">yzxia's fishpond</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '-DewUpWQWtrxHk5zGmf2','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              半导体存储器
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-06-17T20:44:18+08:00" content="2015-06-17">
+            2015-06-17
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/06/17/半导体存储器/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/17/半导体存储器/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>毕设写完了，翻译和论文中涉及了一些半导体存储器的资料，在此顺便整理一下。半导体存储器也是IC发展的一个重要分支，从计算机诞生最初的内存RAM和ROM发展而来，RAM的速度越来越快，而ROM也发展到可以作为大容量数据的存储介质。</p>
+<p><img src="http://7teagv.com1.z0.glb.clouddn.com/半导体存储器家族.png" alt="半导体存储器家族"></p>
+<hr>
+<p>#RAM#<br><strong>RAM（Random Access Memory，随机存取存储器）</strong>，传统的RAM可分为<strong>SRAM（动态随机存取存储器）</strong>和 <strong>DRAM（静态随机存取存储器）</strong>。</p>
+<ul>
+<li><p>SRAM用作CPU高速缓存，速度快，成本高；采用<strong>双稳态电路</strong>来存储数据，无须刷新，1bit需要4-6个MOS管。</p>
+</li>
+<li><p>DRAM用作计算机主存（内存）和GPU显存。采用电容存储数据，为避免电荷泄漏导致出错，需要刷新电路，1bit仅需一个MOS管和一个电容。<br>电容的刷新频率限制了DRAM的高频性能，而后发展出了<strong>SDRAM</strong>（Synchronous Dynamic Random Access Memory，同步动态随机存储器）以及<strong>DDR SDRAM</strong>（Double Data Rate SDRAM），使得RAM和CPU共享时钟周期，且在时钟上升沿和下降沿都能传输数据，最新的主流内存条采用了第三代DDR3能达到1600MHz主频。</p>
+</li>
+</ul>
+<p>SRAM和DRAM都有<strong>断电易失</strong>的特性，断电后不能存储数据。而随着技术的发展，也出现了新型的具有非易失性的RAM：</p>
+<table>
+<thead>
+<tr>
+<th>存储器</th>
+<th style="text-align:left">工作机理</th>
+<th style="text-align:left">特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FeRAM</td>
+<td style="text-align:left">通过铁电晶体的电滞回特性存储数据</td>
+<td style="text-align:left">高写入速度（信息写入速度比普通EEPROM快104倍以上）、低写功耗（写功耗为普通EEPROM快1/103）、更长的工作寿命以及较强的抗辐射能等</td>
+</tr>
+<tr>
+<td>MRAM</td>
+<td style="text-align:left">采用两块纳米级铁磁体，在界面上用一个非磁金属层或绝缘层来夹持一个金属导体的结构。通过改变两块铁磁体的方向，下面的导体的磁致电阻就会发生变化，反之亦然</td>
+<td style="text-align:left">拥有静态随机存储器（SRAM）的高速读取写入能力，以及动态随机存储器（DRAM）的高集成度，理论上可以无限次地重复写入</td>
+</tr>
+<tr>
+<td>RRAM</td>
+<td style="text-align:left">采用金属—绝缘介质—金属（MIM）的三明治结构，通过绝缘介质的电阻转变进行工作</td>
+<td style="text-align:left">国际上最近兴起的新型存储器，在近两年内得到国际重要大公司同时力推，包括三星、SHARP、IBM、NEC 等。其同样具有高速、低功耗的特点。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>#ROM#<br><strong>ROM（Read-Only Memory，只读存储器）</strong>，早期是用于存储计算机BIOS数据，数据在ROM器件制造过程中写入（Mask ROM），读取比RAM慢，数据一次写入且不可更改；断电时数据能保存，即非易失性。所有的ROM都具有非易失性，即非易失性存储器（NVM，NonVolatile Memory）。</p>
+<p>ROM发展到现在实现了可多次擦除和写入，可在系统或终端应用级别进行电写入（PROM，EPROM，EEPROM），常用的是<strong>电擦除</strong>的<strong>EEPROM</strong>，并且发展出了<strong>Flash Memory</strong>（闪存）。</p>
+<p>##EEPROM##<br><strong>结构：</strong><br>目前所采用的EEPROM结构为浮栅隧道氧化物结构—FLOTOX（Floating gate Tunnel Oxide）<br><img src="http://7teagv.com1.z0.glb.clouddn.com/EEPROM.png" alt="浮栅EEPROM"></p>
+<ul>
+<li>浮置栅(Float Gate—FG)“浮置”于氧化层（ONO）中，与其它部分均不相连，处于完全绝缘的状态。由于浮栅被不导电的氧化层完全绝缘，因此其上电荷可以永久存在，实现了数据的永久存储。</li>
+<li>控制栅(Control Gate—CG)用于EEPROM的状态控制。</li>
+<li>选择栅（Select Gate—SG）主要用于防止浮栅在擦除和编程数据时，对存储单元阵列中连接同一根字线的其他存储单元进行误操作，提高擦、写的可靠性，并保护隧道区超薄氧化层。</li>
+</ul>
+<p>在浮置栅和漏端（Drain）之间的氧化层极薄（≈10nm），该区域称为隧道区。基于FN隧穿机理，施加高压电场时，可通过该隧道区把电子注入到浮置栅或把电子排出浮置栅，从而影响存储单元的阈值电压以实现数据改写。</p>
+<p><strong>特点</strong><br>EEPROM实现了可多次擦除和写入，速度远不及RAM但是容量成本低。最初的任天堂GBA卡带就是用EEPROM制作的，这种EEPROM游戏卡本身就是内存，可以直接运行，游戏机也不需要再自备内存了。如今的EEPROM也适用于各种低功耗和低成本的应用，如RFID标签等。</p>
+<p>##Flash##<br><strong>闪存（Flash，全名Flash EEPROM Memory）是EEPROM的变种</strong>。Flash的擦除过程中是在源极加正电压，利用隧穿效应将浮栅中的电子抽出到源极。单元的源极都连在一起加正压擦除，在读写方式上无法像EEPROM一样进行单字节操作，而只能进行块(block)擦除，并且每次须先将整个块中的数据擦除后再写入，在Flash结构中一般也没有选择栅SG。Flash都是块擦除，而根据<strong>读写方式</strong>不同可分为NOR Flash和Nand Flash：</p>
+<p><strong>NOR Flash</strong><br>Intel于1988年首先开发出NOR Flash 技术，NOR Flash的存储单元并联，<strong>支持随机读取</strong>，读取速度较快且能直接运行代码，也即是可<strong>作为内存</strong>使用。与EEPROM相比，NOR Flash的擦除和写入速度慢，但容量成本也较EERPOM低。<br>一般NOR Flash常用来存放操作系统启动的信息，以及某些有<strong>读取操作需求</strong>而对写入和擦除操作要求较低的场合（对于GBA烧录卡，NOR Flash出现后取代了EEPROM）。</p>
+<p><strong>Nand Flash</strong><br>1989年，东芝公司发表了NAND Flash结构，容量成本低，擦除写入快，适合存储数据。常见的用途如U盘，由Nand Flash组成的固态硬盘（SSD）在一定的应用情景下能代替普通的机械硬盘。<br>Nand Flash的集成度非常高，西电附件的<strong>三星（中国）半导体</strong>生产的Nand Flash存储芯片制程已达10纳米级。</p>
+<p><strong>性能比较:</strong></p>
+<blockquote>
+<p>flash闪存是非易失存储器，可以对称为块的存储器单元块进行擦写和再编程。任何flash器件的写入操作只能在空或已擦除的单元内进行，所以大多数情况下，在进行写入操作之前必须先执行擦除。NAND器件执行擦除操作是十分简单的，而NOR则要求在进行擦除前先要将目标块内所有的位都写为0。 执行擦除时块尺寸的不同进一步拉大了NOR和NADN之间的性能差距.</p>
+</blockquote>
+<p>● NOR的读速度比NAND稍快一些。<br>● NAND的写入速度比NOR快很多。<br>● NAND的4ms擦除速度远比NOR的5s快。<br>● 大多数写入操作需要先进行擦除操作。<br>● NAND的擦除单元更小，相应的擦除电路更少。</p>
+<p><strong>接口：</strong><br> NOR flash带有SRAM接口，有足够的地址引脚来寻址，可以很容易地存取其内部的每一个字节。</p>
+<p>NAND器件使用复杂的I/O口来串行地存取数据，共用8位总线（各个产品或厂商的方法可能各不相同）。8个引脚用来传送控制、地址和数据信息。NAND读和写操作采用512字节的页和32KB的块为单位，这一点有点像硬盘管理此类操作，很自然地，基于NAND的存储器就可以取代硬盘或其他块设备。</p>
+<p><strong>容量和成本：</strong><br>NAND flash的单元尺寸几乎是NOR器件的一半，由于生产过程更为简单，NAND结构可以在给定的模具尺寸内提供更高的容量，也就相应地降低了价格，大概只有NOR的十分之一。</p>
+<p>#总结：</p>
+<blockquote>
+<p>读取速度： SRAM &gt;&gt; DRAM &gt;&gt; EEPROM &gt; NOR Flash &gt; Nand Flash &gt; 磁盘</p>
+</blockquote>
+<ul>
+<li>SRAM、DRAM、EEPROM、NOR Flash可直接运行程序（内存） </li>
+<li>Nand Flash、磁盘中存储的数据需要先被读入内存才能进行操作。</li>
+</ul>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/存储/" rel="tag">#存储</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/05/11/结束一段感情/" rel="next">结束一段感情</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2015/06/17/半导体存储器/"
+     data-title="半导体存储器"
+     data-content=""
+     data-url="http://yoursite.com/2015/06/17/半导体存储器/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/06/17/半导体存储器/"
+                   data-title="半导体存储器" data-url="http://yoursite.com/2015/06/17/半导体存储器/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="http://7teagv.com1.z0.glb.clouddn.com/ST.jpg" alt="yzxia" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">yzxia</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/woolader" target="_blank">Weibo</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/xia-yu-zhe" target="_blank">ZhiHu</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.douban.com/people/yzxia/" target="_blank">DouBan</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2014 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yzxia</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yzxia"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
